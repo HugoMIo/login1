@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="event.js" defer></script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'rel='stylesheet'>
 <link rel="stylesheet" href="style.css">
 
@@ -13,22 +16,32 @@
     <main class="container">
     <form action="">
             <h1>Login</h1>
-        <div class="imput-box">
-            <input type="email" id="email" placeholder="Usuário">
-            <i class="bx bxs-user"></i>
-        </div>
-        <div class="imput-box">
-            <input id="senha" type="password" placeholder="Senha">
-            <i class="bx bxs-lock-alt" id="changeatribute"></i>
-        </div>
+            <div class="imput-box">
+                <input type="email" id="email" placeholder="Usuário" aria-describedby="email-error">
+                <i class="bx bxs-user"></i>
+                <div class="error-message" id="email-error" role="alert" aria-live="assertive"></div>
+            </div>
+            <div class="imput-box">
+                <input id="senha" type="password" placeholder="Senha" aria-describedby="password-requirements senha-error">
+                <i class="bx bxs-lock-alt" id="changeatribute"></i>
+                <div class="error-message" id="senha-error" role="alert" aria-live="assertive"></div>
+            </div>
+        <ul id="password-requirements" class="pw-req">
+            <li data-rule="length">Mínimo 8 caracteres</li>
+            <li data-rule="lower">Uma letra minúscula (a–z)</li>
+            <li data-rule="upper">Uma letra maiúscula (A–Z)</li>
+            <li data-rule="number">Um número (0–9)</li>
+            <li data-rule="special">Um caractere especial (!@#$%...)</li>
+        </ul>
+
         <div class="remember-forgot">
             <label for="">
             <input type="checkbox">lembrar senha</label>
-            <a href="#">esqueci a senha</a>
+            <a href="index.html">esqueci a senha</a>
         </div>
         <button type="submit" class=button>Login</button>        
         <div class="resgiter-link">
-            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            <p>Não tem uma conta? <a href="index.html">Cadastre-se</a></p>
         </div>
     </form>
     </main>

@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  font-family: "Jaro", sans-serif;
+    font-family: 'Noto Serif', serif;
 }
 
 
@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('img/floresta-tropical.png');
+    background: url('img/site.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -23,47 +23,47 @@ body {
     background-color: transparent;
     border: 2px solid rgba(252, 245, 245, 0.2);
     border-radius: 20px;
-    color:white;
+    color:rgb(0, 0, 0);
     padding: 30px 40px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .container h1{
-    font-size: 36px;
+    font-size: 50px;
     text-align: center;
-    color:rgb(189, 184, 184);
+    color:rgb(0, 0, 0);
 }
 
 .imput-box{
     position: relative;
     width: 100%;
-    height: 50px;
+    min-height: 50px;
     margin: 30px 0;
 }
 
 .imput-box input{
-    width: 100%;
-    height: 100%;
+    width: 370px;
+    height: 15px;
     background-color: transparent;
     border: 2px solid rgba(252, 245, 245, 0.2);
     border-radius: 40px ;
     outline: none;
     font-size: 16px;
-    color:white;
+    color:rgb(0, 0, 0);
     padding: 20px 45px 20px 20px;
 }
 
 .imput-box input::placeholder {
-    color: rgb(209, 195, 195)
+    color: rgb(61, 57, 57);
 }
 
 .imput-box i {
     position: absolute;
-    right: 20px;
-    top: 50%;
+    right: 10px;
+    top: 42%;
     transform: translateY(-50%);
-    font-size: 20px;
+    font-size: 23px;
 }
 
 .remember-forgot {
@@ -72,13 +72,13 @@ body {
     margin: -15px 0 15px;
 }
 .remember-forgot label input{
-    accent-color: white;
+    accent-color: rgb(46, 44, 44);
     margin-right: 5px;
 }
 
 .remember-forgot a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .remember-forgot a:hover {
@@ -89,7 +89,7 @@ body {
     width: 100%;
     height: 50px;
     background-color: white;
-    border: nome;
+    border: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 16px;
@@ -120,4 +120,39 @@ body {
  
 .resgiter-link a:hover {
     text-decoration: underline;
+}
+.pw-req { list-style: none; padding: 0; margin: .5rem 0 1rem; font-size: .9rem; }
+.pw-req li { color: #c00; margin: 4px 0; }
+.pw-req li.valid { color: rgb(0, 255, 0); }
+.pw-req li::before { content: "• "; }
+.pw-req li.valid::before { content: "✓ "; color: #0a0; }
+
+.error-message {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 0px;
+    text-align: center;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(-6px);
+    transition: max-height 240ms cubic-bezier(.2,.8,.2,1),
+                opacity 180ms ease,
+                margin-top 180ms ease,
+                transform 240ms cubic-bezier(.2,.8,.2,1);
+}
+
+.error-message.visible {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 8px;
+    transform: translateY(0);
+}
+
+.imput-box.error input {
+    border-color: #ff0000;
+}
+
+.imput-box.error input {
+    border-color: #ff0000;
 }
